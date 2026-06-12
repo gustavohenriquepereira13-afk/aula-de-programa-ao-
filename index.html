@@ -5,22 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgroAlerta - Painel do Produtor</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        .nav-menu {
-            text-align: right;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
+</head>
+<body>
+
+    <header>
+        <h1>AgroAlerta 🌾</h1>
+        <p>Tecnologia e Sustentabilidade para o Pequeno Produtor</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="grid-cards">
+            <div class="card">
+                <h3>Umidade do Solo</h3>
+                <div class="valor" id="umidade">34%</div>
+            </div>
+            <div class="card">
+                <h3>Temperatura</h3>
+                <div class="valor">26°C</div>
+            </div>
+            <div class="card">
+                <h3>Previsão de Chuva</h3>
+                <div class="valor">85%</div>
+            </div>
+            <div class="card">
+                <h3>Economia de Água</h3>
+                <div class="valor">12.4 m³</div>
+            </div>
+        </div>
+
+        <div class="alert-box">
+            <h2>⚠️ Recomendação do Sistema</h2>
+            <p id="texto-alerta">O solo está com umidade abaixo do ideal para o plantio atual, mas há previsão de chuva forte para as próximas horas.</p>
+            <p><strong>Ação recomendada:</strong> Evite ligar a irrigação automática agora para economizar recursos hídricos e financeiros.</p>
+            <button class="btn-acao" onclick="simularAtualizacao()">Simular Nova Leitura de Sensores</button>
+        </div>
+
+    </div>
+
+    <footer>
+        Projeto Desenvolvido para o Concurso Agrinho • Categoria Front-End
+    </footer>
+
+    <script>
+        function simularAtualizacao() {
+            const umidadeElemento = document.getElementById('umidade');
+            const alertaElemento = document.getElementById('texto-alerta');
+            
+            umidadeElemento.innerText = '78%';
+            umidadeElemento.style.color = '#2e7d32';
+            
+            alertaElemento.innerHTML = '<strong>Solo irrigado naturalmente!</strong> As condições atuais estão perfeitas e o ecossistema está equilibrado.';
+            
+            alert('Dados dos sensores atualizados com sucesso!');
         }
-        .nav-link {
-            color: var(--primary);
-            font-weight: bold;
-            text-decoration: none;
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 3px;
-            transition: color 0.2s, border-color 0.2s;
-        }
-        .nav-link:hover {
-            color: var(--primary-light);
-            border-color: var(--primary-light);
-        }
+    </script>
+</body>
+</html>
