@@ -3,62 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroAlerta - Painel do Produtor</title>
+    <title>Agrinho 2026 - Agro Sustentável</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>AgroAlerta 🌾</h1>
-        <p>Tecnologia e Sustentabilidade para o Pequeno Produtor</p>
+    <header class="navbar">
+        <div class="logo">Agro<span>Sustentável</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">O Projeto</a></li>
+                <li><a href="#solucoes">Soluções</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container">
-        
-        <div class="grid-cards">
-            <div class="card">
-                <h3>Umidade do Solo</h3>
-                <div class="valor" id="umidade">34%</div>
+    <section id="inicio" class="hero-section">
+        <div class="hero-content">
+            <h1>Equilíbrio entre Produção e Meio Ambiente</h1>
+            <p>Conectando a tecnologia do campo à consciência urbana para cultivar um amanhã mais verde.</p>
+            <a href="#sobre" class="btn-principal">Conheça o Projeto</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre-section">
+        <h2>Sementes do Futuro</h2>
+        <p class="subtitulo">Como a tecnologia apoia o produtor e protege a natureza.</p>
+        <div class="sobre-grid">
+            <div class="card-sobre">
+                <h3>Agro Forte</h3>
+                <p>Otimização de colheitas com uso inteligente de recursos hídricos e sistemas que evitam o desperdício.</p>
             </div>
-            <div class="card">
-                <h3>Temperatura</h3>
-                <div class="valor">26°C</div>
-            </div>
-            <div class="card">
-                <h3>Previsão de Chuva</h3>
-                <div class="valor">85%</div>
-            </div>
-            <div class="card">
-                <h3>Economia de Água</h3>
-                <div class="valor">12.4 m³</div>
+            <div class="card-sobre">
+                <h3>Futuro Sustentável</h3>
+                <p>Uso de energia limpa, rotação de culturas e preservação do solo para as próximas gerações.</p>
             </div>
         </div>
+    </section>
 
-        <div class="alert-box">
-            <h2>⚠️ Recomendação do Sistema</h2>
-            <p id="texto-alerta">O solo está com umidade abaixo do ideal para o plantio atual, mas há previsão de chuva forte para as próximas horas.</p>
-            <p><strong>Ação recomendada:</strong> Evite ligar a irrigação automática agora para economizar recursos hídricos e financeiros.</p>
-            <button class="btn-acao" onclick="simularAtualizacao()">Simular Nova Leitura de Sensores</button>
+    <section id="solucoes" class="solucoes-section">
+        <h2>Nossas Soluções Digitais</h2>
+        <div class="cards-container">
+            <div class="card-solucao">
+                <div class="icone">🌱</div>
+                <h3>Monitoramento de Solo</h3>
+                <p>Sensores simples integrados para medir a umidade exata que a planta precisa.</p>
+            </div>
+            <div class="card-solucao">
+                <div class="icone">📊</div>
+                <h3>Feira Digital</h3>
+                <p>Aproximação do pequeno produtor ao consumidor final, reduzindo a pegada de carbono do transporte.</p>
+            </div>
+            <div class="card-solucao">
+                <div class="icone">☀️</div>
+                <h3>Gestão de Energia</h3>
+                <p>Painéis solares inteligentes automatizados via código de forma acessível.</p>
+            </div>
         </div>
+    </section>
 
-    </div>
-
-    <footer>
-        Projeto Desenvolvido para o Concurso Agrinho • Categoria Front-End
+    <footer id="contato">
+        <p>&copy; 2026 Projeto Agrinho - Desenvolvido para a Categoria Programação Front-End.</p>
+        <p>Trilhas de Programação | Seed-PR & SENAR-PR</p>
     </footer>
 
-    <script>
-        function simularAtualizacao() {
-            const umidadeElemento = document.getElementById('umidade');
-            const alertaElemento = document.getElementById('texto-alerta');
-            
-            umidadeElemento.innerText = '78%';
-            umidadeElemento.style.color = '#2e7d32';
-            
-            alertaElemento.innerHTML = '<strong>Solo irrigado naturalmente!</strong> As condições atuais estão perfeitas e o ecossistema está equilibrado.';
-            
-            alert('Dados dos sensores atualizados com sucesso!');
-        }
-    </script>
 </body>
 </html>
